@@ -263,10 +263,9 @@ static int xmp_chmod(const char *path, mode_t mode)
 void enkripsi(char inputan[])
 {
         int key=17;
-        char *semua;
         int uk_input = strlen(inputan);
         char print[uk_input];
-        sprintf(semua, "qE1~ YMUR2%c`hNIdPzi%c^t@(Ao:=CQ,nx4S[7mHFye#aT6+v)DfKL$r?bkOGB>}!9_wV']jcp5JZ&Xl|%c8s;g<{3.u*W-0", '"', '%', '\\');
+        char semua[] ="qE1~ YMUR2\"`hNIdPzi%^t@(Ao:=CQ,nx4S[7mHFye#aT6+v)DfKL$r?bkOGB>}!9_wV']jcp5JZ&Xl|\\8s;g<{3.u*W-0";
         int a=0;
         int ukuran=sizeof(semua)-1;
         for(a=0 ; a<strlen(inputan) ; a++)
@@ -290,10 +289,9 @@ void enkripsi(char inputan[])
 void dekripsi(char inputan[])
 {
         int key=17;
-        char *semua;
         int uk_input = strlen(inputan);
         char print[uk_input];
-        sprintf(semua, "qE1~ YMUR2%c`hNIdPzi%c^t@(Ao:=CQ,nx4S[7mHFye#aT6+v)DfKL$r?bkOGB>}!9_wV']jcp5JZ&Xl|%c8s;g<{3.u*W-0", '"', '%', '\\');
+         char semua[] ="qE1~ YMUR2\"`hNIdPzi%^t@(Ao:=CQ,nx4S[7mHFye#aT6+v)DfKL$r?bkOGB>}!9_wV']jcp5JZ&Xl|\\8s;g<{3.u*W-0";
         int a=0;
         int ukuran=sizeof(semua)-1;
         for(a=0 ; a<strlen(inputan) ; a++)
