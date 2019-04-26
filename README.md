@@ -108,7 +108,6 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
                 memset(&st, 0, sizeof(st));
                 st.st_ino = de->d_ino;
                 st.st_mode = de->d_type << 12;
-                //no 4
 //              strcpy(tampung,de->d_name);
 //              strcat(tampung,".iz1");
 //              if(filler(buf,tampung,&st,0)) break; //klo uda kbuat(1) break
