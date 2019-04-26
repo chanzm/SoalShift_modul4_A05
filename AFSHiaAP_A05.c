@@ -51,10 +51,9 @@ static int xmp_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
                 memset(&st, 0, sizeof(st));
                 st.st_ino = de->d_ino;
                 st.st_mode = de->d_type << 12;
-                //no 4
 //              strcpy(tampung,de->d_name);
 //              strcat(tampung,".iz1");
-//              if(filler(buf,tampung,&st,0)) break; //klo uda kbuat(1) break
+//              if(filler(buf,tampung,&st,0)) break;
                 res = (filler(buf, de->d_name, &st, 0));
                         if(res!=0) break;
         }
@@ -155,8 +154,7 @@ static int xmp_mknod(const char *path, mode_t mode, dev_t rdev)
 
         int res;
         mode=640;
-        /* On Linux this could just be 'mknod(path, mode, rdev)' but this
-           is more portable */
+ 
         if (S_ISREG(mode)) {
                 res = open(fpath, O_CREAT | O_EXCL | O_WRONLY, mode);
                 if (res >= 0)
